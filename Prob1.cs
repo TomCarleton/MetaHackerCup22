@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -18,7 +18,7 @@ namespace Prob1
             string[] inputString = File.ReadAllLines("D:\\Code\\Meta Hacker Cup\\Prob1\\Prob1\\Prob1Input.txt");
 
             // Runcode here
-            int testCases = Int32.Parse(inputString[0]);
+            int testCases = Int32.Parse(inputString[0]);    // Read number of test cases
 
             for (int i = 1; i <= testCases; i++)
             {
@@ -39,7 +39,7 @@ namespace Prob1
                 string[] inputStylesString = inputString[2 * i].Split(' ');
                 int[] inputStyles = Array.ConvertAll(inputStylesString, int.Parse);
 
-                // Check if there are more than 2 of any type
+                // Check if there are more than 2 of any style
                 int[] styleCount = new int[inputStyles.Max()];  // Create blank array to count styles
 
                 for (int x = 0; x < N; x++){
@@ -50,14 +50,13 @@ namespace Prob1
                     }
                 }
 
-                if (styleCount.Max() > 2)
+                if (styleCount.Max() > 2)   // Check for more than 2 of any style
                 {
                     Console.WriteLine($"Case #{i}: NO");
                     continue;
                 }
 
-
-
+                // Else, solution is possible
                 Console.WriteLine($"Case #{i}: YES");
             }
         }
