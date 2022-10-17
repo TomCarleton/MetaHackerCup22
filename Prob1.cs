@@ -12,7 +12,7 @@ namespace ProbA
     internal class ProbA
     {
 
-        static void Main(string[] args)
+        public static void RunProbA()
         {
             // Read input
             string[] inputString = File.ReadAllLines("D:\\Code\\Meta Hacker Cup\\Qualifying\\Qualifying\\ProbAInput.txt");
