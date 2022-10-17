@@ -7,15 +7,15 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Prob1
+namespace ProbA
 {
-    internal class Program
+    internal class ProbA
     {
 
         static void Main(string[] args)
         {
             // Read input
-            string[] inputString = File.ReadAllLines("D:\\Code\\Meta Hacker Cup\\Prob1\\Prob1\\Prob1Input.txt");
+            string[] inputString = File.ReadAllLines("D:\\Code\\Meta Hacker Cup\\Qualifying\\Qualifying\\ProbAInput.txt");
 
             // Runcode here
             int testCases = Int32.Parse(inputString[0]);    // Read number of test cases
@@ -29,7 +29,7 @@ namespace Prob1
                 int K = Int32.Parse(inputVariables[1]);
 
                 // Check the cases are big enough for all parts
-                if (2*K < N)
+                if (2 * K < N)
                 {
                     Console.WriteLine($"Case #{i}: NO");
                     continue;
@@ -42,7 +42,8 @@ namespace Prob1
                 // Check if there are more than 2 of any style
                 int[] styleCount = new int[inputStyles.Max()];  // Create blank array to count styles
 
-                for (int x = 0; x < N; x++){
+                for (int x = 0; x < N; x++)
+                {
                     for (int y = 1; y <= styleCount.Length; y++)
                     {
                         if (inputStyles[x] == y)    // Count number of each style
